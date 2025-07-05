@@ -1,0 +1,145 @@
+.topic-page {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  animation: fadeIn 0.7s ease-in;
+}
+
+.topic-page h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.topic-page h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 10px auto 0;
+  background: #00b894;
+  border-radius: 5px;
+}
+
+.quote {
+  text-align: center;
+  font-style: italic;
+  color: #636e72;
+  margin: 1rem 0 2rem;
+  font-size: 1.1rem;
+  animation: fadeUp 0.6s ease;
+}
+
+.content-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: popIn 0.6s ease;
+}
+
+.content-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.topic-image {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 0.7s ease;
+}
+
+.content-box h4 {
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+  color: #2d3436;
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.content-box p {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #2d3436;
+  margin-bottom: 1rem;
+  animation: fadeUp 0.5s ease;
+}
+
+.content-box a {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #0984e3;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.content-box a:hover {
+  color: #0652dd;
+  border-bottom: 2px solid #0652dd;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+  .topic-page h2 {
+    font-size: 2rem;
+  }
+
+  .content-box {
+    padding: 1.3rem;
+  }
+
+  .content-box p {
+    font-size: 1rem;
+  }
+
+  .content-box h4 {
+    font-size: 1.1rem;
+  }
+}
