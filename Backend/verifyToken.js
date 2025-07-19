@@ -10,7 +10,7 @@ export const verifyToken = (req, res, next) => {
 
   jwt.verify(token, process.env.JWT, (err, user) => {
     if (err) return next(createError(403, "Token is not valid"));
-    req.userId = user.id; // ✅ So you can use req.userId in controllers
+    req.userId = user.id; // use req.userId in controllers
     next();
   });
 };
